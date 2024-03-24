@@ -1,9 +1,11 @@
 #include <stdio.h>
+#include <locale.h>
 
 void print(char* str, ...); // пототип функции из файла на ассемблере
 
 int main(void) {
-    char* str = "Hello!\nIt dec %d\nIt hex %x \n It octal %o \nIt binary %b\n%d\n%x\n%o\n";
+    setlocale(LC_ALL, "");
+    char* str = "привет!\nIt dec %d\nIt hex %x \n It octal %o \nIt binary %b\n%d\n%x\n%o\n";
     int k1 = -10;
     int k2 = -80;
     int k3 = 87;
